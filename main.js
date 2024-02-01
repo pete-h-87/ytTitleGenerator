@@ -1,4 +1,4 @@
-const adjective = [
+const adjectives = [
   "awful",
   "boring",
   "cheap",
@@ -43,7 +43,7 @@ const adjective = [
   "worthless",
 ];
 
-const noun = [
+const nouns = [
   "apples",
   "bananas",
   "chairs",
@@ -93,3 +93,14 @@ const noun = [
   "chair cushions",
   "bedsheets",
 ];
+
+//const randomAdj = document.getelementById();
+//const randomNoun = document.getelementById();
+
+const cheesyYoutubeTitle = () => {
+  let i = Math.floor(Math.random() * adjectives.length);
+  let j = Math.floor(Math.random() * nouns.length);
+  return `The ${adjectives[i]} TRUTH about ${nouns[j]}.`;
+};
+
+console.log(cheesyYoutubeTitle())
