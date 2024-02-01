@@ -118,6 +118,7 @@ button:hover {
 
   #YTtitle {
     text-align: center; /* Center the text within the h2 element */
+    font-size: 30px
   }
   
   /* Optionally, center the h2 element itself within its parent container */
