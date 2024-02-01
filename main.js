@@ -2,24 +2,24 @@ const adjectives = [
   "awful",
   "boring",
   "cheap",
-  "clumsy",
+  "creepy",
   "cruel",
   "dark",
   "depressing",
   "disgusting",
   "dull",
-  "empty",
+  "bloody",
   "evil",
   "fragile",
-  "gross",
+  "finger-licking",
   "harsh",
   "horrible",
-  "incompetent",
+  "impotent",
   "insane",
   "irritating",
   "lazy",
-  "lonely",
-  "loud",
+  "salty",
+  "prickly",
   "mean",
   "miserable",
   "mediocre",
@@ -33,14 +33,14 @@ const adjectives = [
   "shallow",
   "stupid",
   "tacky",
-  "tasteless",
+  "buttery",
   "ugly",
   "unpleasant",
-  "unreliable",
-  "weak",
-  "wrong",
+  "rock-hard",
+  "delicious",
+  "hairy",
   "wretched",
-  "worthless",
+  "busty",
 ];
 
 const nouns = [
@@ -51,11 +51,11 @@ const nouns = [
   "dogs",
   "cats",
   "trees",
-  "houses",
+  "fisting",
   "books",
-  "pens",
+  "geese",
   "pencils",
-  "papers",
+  "yo mama",
   "scissors",
   "cups",
   "plates",
@@ -63,14 +63,14 @@ const nouns = [
   "knives",
   "spoons",
   "beds",
-  "windows",
+  "Taylor Swift fans",
   "doors",
   "walls",
   "floors",
   "ceilings",
   "keys",
   "locks",
-  "lights",
+  "the Boomers",
   "fans",
   "doorknobs",
   "windowpanes",
@@ -94,13 +94,26 @@ const nouns = [
   "bedsheets",
 ];
 
-//const randomAdj = document.getelementById();
-//const randomNoun = document.getelementById();
+  // Select the button and phrase container
+  const generateButton = document.getElementById("generateButton");
+  const generatedPhraseElement = document.getElementById("generatedPhrase");
 
+
+
+// Your cheesyYoutubeTitle function
 const cheesyYoutubeTitle = () => {
-  let i = Math.floor(Math.random() * adjectives.length);
-  let j = Math.floor(Math.random() * nouns.length);
-  return `The ${adjectives[i]} TRUTH about ${nouns[j]}.`;
-};
+    let i = Math.floor(Math.random() * adjectives.length);
+    let j = Math.floor(Math.random() * nouns.length);
+    return `The ${adjectives[i]} TRUTH about ${nouns[j]}.`;
+  };
 
-console.log(cheesyYoutubeTitle())
+  
+  
+  // Attach event listener to the button
+  generateButton.addEventListener("click", () => {
+    // Generate the title
+    const cheesyTitle = cheesyYoutubeTitle();
+    const h2Element = document.getElementById("YTtitle");
+  h2Element.textContent = cheesyTitle;
+  });
+  
